@@ -1,0 +1,25 @@
+{
+    "name": "dynamic/silverstripe-carousel",
+    "description": "A simple carousel for Silverstripe websites.",
+    "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS"
+    ],
+    "require": {
+        "silverstripe/recipe-cms": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Dynamic\\Carousel\\": "src/",
+            "Dynamic\\Carousel\\Test\\": "tests/php/"
+        }
+    }
+}

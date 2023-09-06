@@ -1,6 +1,6 @@
 # Silverstripe Carousel
 
-A simple carousel for Silverstripe websites. The default template uses Bootstrap classes to power the carousel, but you can use a custom template and any javascript library you like.
+A simple carousel for Silverstripe websites. The default template uses Bootstrap classes to power the carousel. If you are not using Bootstrap, you can use a custom template and include your own javascript.
 
 ![CI](https://github.com/dynamic/silverstripe-carousel/workflows/CI/badge.svg)
 [![codecov](https://codecov.io/gh/dynamic/silverstripe-carousel/branch/master/graph/badge.svg)](https://codecov.io/gh/dynamic/silverstripe-carousel)
@@ -22,21 +22,23 @@ A simple carousel for Silverstripe websites. The default template uses Bootstrap
 
 See [License](LICENSE.md)
 
-## Example configuration
+## Usage
 
-If your module makes use of the config API in Silverstripe CMS it's a good idea to provide an example config
-here that will get the module working out of the box and expose the user to the possible configuration options.
-Though note that in many cases simply linking to the documentation is enough.
-
-Provide a syntax-highlighted code examples where possible.
+To add a carousel to a page, apply `CarouselPageExtension` to a page type:
 
 ```yaml
 Page:
-  config_option: true
-  another_config:
-    - item1
-    - item2
+  extensions:
+    - Dynamic\Carousel\Extensions\CarouselPageExtension
 ```
+
+In your template, include the `Carousel` template:
+
+```html
+<% include Carousel %> 
+```
+
+The default template assumes you are using Bootstrap, and requires no additional javascript. If you are not using Bootstrap, you can use a custom template and include your own javascript.
 
 ## Maintainers
  *  [Dynamic](http://www.dynamicagency.com) (<dev@dynamicagency.com>)

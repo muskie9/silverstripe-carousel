@@ -21,5 +21,10 @@
             "Dynamic\\Carousel\\": "src/",
             "Dynamic\\Carousel\\Test\\": "tests/"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
     }
 }

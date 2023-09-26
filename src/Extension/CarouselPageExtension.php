@@ -20,7 +20,7 @@ use SilverStripe\Forms\NumericField;
 /**
  * Class \Dynamic\Carousel\Extension\CarouselPageExtension
  *
- * @property BlockPage|CampaignLandingPage|HomePage|CarouselPageExtension $owner
+ * @property CarouselPageExtension $owner
  * @property string $Controls
  * @property string $Indicators
  * @property string $Transitions

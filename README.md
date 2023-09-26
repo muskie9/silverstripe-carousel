@@ -38,7 +38,9 @@ In your template, include the `Carousel` template:
 <% include Carousel %> 
 ```
 
-The default template assumes you are using Bootstrap, and requires no additional javascript. If you are not using Bootstrap, you can use a custom template and include your own javascript.
+### Template Notes
+
+The default template assumes you are using [Bootstrap 5](https://getbootstrap.com/), and requires no additional javascript. If you are not using Bootstrap, you can use a custom template and include your own javascript.
 
 ## Maintainers
  *  [Dynamic](http://www.dynamicagency.com) (<dev@dynamicagency.com>)

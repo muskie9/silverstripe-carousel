@@ -35,7 +35,7 @@ Page:
 In your template, include the `Carousel` template:
 
 ```html
-<% include Carousel %> 
+<% include Dynamic/Carousel/Carousel %> 
 ```
 
 ### Template Notes

@@ -42,6 +42,9 @@ In your template, include the `Carousel` template:
 
 The default template assumes you are using [Bootstrap 5](https://getbootstrap.com/), and requires no additional javascript. If you are not using Bootstrap, you can use a custom template and include your own javascript.
 
+Note - if you are not including all of Bootstrap, you will need to manually include the carousel component.
+
+
 ## Maintainers
  *  [Dynamic](http://www.dynamicagency.com) (<dev@dynamicagency.com>)
 

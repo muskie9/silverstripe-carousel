@@ -27,21 +27,25 @@ class Slide extends DataObject
 {
     /**
      * @var string
+     * @config
      */
     private static $table_name = 'Dynamic_Slide';
 
     /**
      * @var string
+     * @config
      */
     private static $singular_name = 'Slide';
 
     /**
      * @var string
+     * @config
      */
     private static $plural_name = 'Slides';
 
     /**
-     * @var string[]
+     * @var array
+     * @config
      */
     private static $db = [
         'Title' => 'Varchar',
@@ -51,21 +55,24 @@ class Slide extends DataObject
     ];
 
     /**
-     * @var string[]
+     * @var array
+     * @config
      */
     private static $has_one = [
         'Parent' => DataObject::class,
     ];
 
     /**
-     * @var string[]
+     * @var array
+     * @config
      */
     private static $extensions = [
         Versioned::class,
     ];
 
     /**
-     * @var string[]
+     * @var array
+     * @config
      */
     private static $summary_fields = [
         'Title' => 'Slide Title',
@@ -73,6 +80,7 @@ class Slide extends DataObject
 
     /**
      * @var array
+     * @config
      */
     private static $searchable_fields = [
         'ID' => [
@@ -122,10 +130,9 @@ class Slide extends DataObject
             return $extended;
         }
 
-        if ($this->Parent()) {
-            if ($parent = $this->Parent()) {
-                return $parent->canView($member);
-            }
+        if ($this->Parent()->exists()) {
+            $parent = $this->Parent();
+            return $parent->canView($member);
         }
 
         return (Permission::check('CMS_ACCESS', 'any', $member)) ? true : null;
@@ -145,10 +152,9 @@ class Slide extends DataObject
             return $extended;
         }
 
-        if ($this->Parent()) {
-            if ($parent = $this->Parent()) {
-                return $parent->canEdit($member);
-            }
+        if ($this->Parent()->exists()) {
+            $parent = $this->Parent();
+            return $parent->canEdit($member);
         }
 
         return (Permission::check('CMS_ACCESS', 'any', $member)) ? true : null;
@@ -173,13 +179,13 @@ class Slide extends DataObject
             return $extended;
         }
 
-        if ($this->Parent()) {
-            if ($parent = $this->Parent()) {
-                if ($parent->hasExtension(Versioned::class)) {
-                    return $parent->canArchive($member);
-                } else {
-                    return $parent->canDelete($member);
-                }
+        if ($this->Parent()->exists()) {
+            $parent = $this->Parent();
+            if ($parent->hasExtension(Versioned::class)) {
+                // @phpstan-ignore-next-line
+                return $parent->canArchive($member);
+            } else {
+                return $parent->canDelete($member);
             }
         }
 

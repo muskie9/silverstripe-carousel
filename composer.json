@@ -8,7 +8,7 @@
         "CMS"
     ],
     "require": {
-        "silverstripe/linkfield":"^4.0",
+        "silverstripe/linkfield":"^5.0",
         "silverstripe/recipe-cms": "6.x-dev"
     },
     "require-dev": {

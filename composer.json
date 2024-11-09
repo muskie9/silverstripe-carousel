@@ -11,7 +11,8 @@
         "silverstripe/linkfield":"^5.0",
         "silverstripe/recipe-cms": "6.x-dev",
         "symbiote/silverstripe-gridfieldextensions": "^5",
-        "jonom/focuspoint": "dev-silverstripe6"
+        "jonom/focuspoint": "dev-silverstripe6",
+        "unclecheese/display-logic": "dev-silverstripe6"
     },
     "require-dev": {
         "dnadesign/silverstripe-elemental": "6.x-dev"
@@ -20,6 +21,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:muskie9/silverstripe-focuspoint.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:dynamic/silverstripe-display-logic.git"
         }
     ],
     "minimum-stability": "dev",

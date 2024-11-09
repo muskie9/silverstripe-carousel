@@ -9,7 +9,8 @@
     ],
     "require": {
         "silverstripe/linkfield":"^5.0",
-        "silverstripe/recipe-cms": "6.x-dev"
+        "silverstripe/recipe-cms": "6.x-dev",
+        "symbiote/silverstripe-gridfieldextensions": "^5"
     },
     "require-dev": {
         "dnadesign/silverstripe-elemental": "6.x-dev"

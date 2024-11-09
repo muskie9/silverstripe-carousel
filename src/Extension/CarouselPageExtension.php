@@ -77,6 +77,8 @@ class CarouselPageExtension extends Extension
     public function updateCMSFields(\SilverStripe\Forms\FieldList $fields)
     {
         if ($this->getOwner()->exists()) {
+            $fields->removeByName('Slides');
+
             $grid = GridField::create(
                 'Slides',
                 'Slides',
